@@ -30,8 +30,9 @@ async function testUrls() {
   console.log(`URLs que retornaram código 403: ${forbiddenUrls.join(', ')}`);
 
   const csvContent = `url,erro\n${errorUrls.join('\n')}`;
-
-  fs.writeFile('urls_com_erros.csv', csvContent, (err) => {
+// Gera um csv com data e resultado dos games que não  funcionam 
+  now = new Date
+  fs.writeFile('urls_com_erros.csv'+ now.getDay() + ", " + now.getDate() + " de " + now.getMonth() + " de " + now.getFullYear(), csvContent, (err) => {
     if (err) {
       console.error('Erro ao escrever arquivo CSV', err);
     } else {
