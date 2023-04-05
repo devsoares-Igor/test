@@ -18,7 +18,8 @@ async function testUrls() {
   for (const url of urls) {
     try {
       const response = await axios.get(url);
-      if (response.status === 403) {
+      if (response.status === 403)         
+      {
         forbiddenUrls.push(url);
       }
     } catch (error) {
@@ -30,9 +31,10 @@ async function testUrls() {
   console.log(`URLs que retornaram código 403: ${forbiddenUrls.join(', ')}`);
 
   const csvContent = `url,erro\n${errorUrls.join('\n')}`;
-// Gera um csv com data e resultado dos games que não  funcionam 
+  // Gera um csv com data e resultado dos games que não  funcionam 
+
   now = new Date
-  fs.writeFile('urls_com_erros.csv'+ now.getDay() + ", " + now.getDate() + " de " + now.getMonth() + " de " + now.getFullYear(), csvContent, (err) => {
+  fs.writeFile('urls_com_erros.csv' + now.getDay() + ", " + now.getDate() + " de " + now.getMonth() + " de " + now.getFullYear(), csvContent, (err) => {
     if (err) {
       console.error('Erro ao escrever arquivo CSV', err);
     } else {
