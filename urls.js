@@ -1,5 +1,5 @@
-// instalar as libs 
-
+//instalar as libs 
+//npm install axios
 //npm install csv-writer
 //sudo apt intall axios
 
