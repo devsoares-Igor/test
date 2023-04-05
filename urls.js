@@ -6,7 +6,7 @@
 const fs = require('fs');
 const axios = require('axios');
 
-const csvFilePath = 'arquivo.csv';
+const csvFilePath = 'arquivo.csv'; // arquivo csv que vai ser analizado 
 
 async function testUrls() {
   const csv = fs.readFileSync(csvFilePath, 'utf-8');
