@@ -34,7 +34,7 @@ async function testUrls() {
   // Gera um csv com data e resultado dos games que não  funcionam 
 
   now = new Date
-  fs.writeFile('urls_com_erros.csv' + now.getDay() + ", " + now.getDate() + " de " + now.getMonth() + " de " + now.getFullYear(), csvContent, (err) => {
+  fs.writeFile( now.getDay() + ", " + now.getDate() + " de " + now.getMonth() + " de " + now.getFullYear() + 'urls_com_erros.csv', csvContent, (err) => {
     if (err) {
       console.error('Erro ao escrever arquivo CSV', err);
     } else {
